@@ -1,0 +1,20 @@
+show dbs
+use futbolFifa
+db.createCollection("players")
+show collections
+ db.players.insert({nombre:"Lionel",apellido:"messi",fechaNacimiento:new Date("1987,06,24"),posicion:"delantero"})
+WriteResult({ "nInserted" : 1 })
+> db.players.insert({nombre:"Lautaro",apellido:"Martinez",fechaNacimiento:new Date("1992,10,23"),posicion:"delantero",ciudad:"Bahia Blanca"})
+WriteResult({ "nInserted" : 1 })
+> db.players.insert({nombre:"Carlos",apellido:"tevez",fechaNacimiento:new Date("1985,02,10"),posicion:"delantero",ciudad:"Buenos Aires"})
+WriteResult({ "nInserted" : 1 })
+> db.players.insert({nombre:"Sergio",apellido:"Aguero",fechaNacimiento:new Date("1987,12,10"),posicion:"delantero",ciudad:"Buenos Aires",piernaHabil:"derecha"})
+WriteResult({ "nInserted" : 1 })
+> db.players.insert({nombre:"Alejandro",apellido:"Gomez",fechaNacimiento:new Date("1986,03,13"),posicion:"volante",ciudad:"Buenos Aires",apodo:"papu"})
+WriteResult({ "nInserted" : 1 })
+> db.players.find()
+{ "_id" : ObjectId("5f866db8f043005d717f4685"), "nombre" : "Lionel", "apellido" : "messi", "fechaNacimiento" : ISODate("1987-06-24T03:00:00Z"), "posicion" : "delantero" }
+{ "_id" : ObjectId("5f866df0f043005d717f4686"), "nombre" : "Lautaro", "apellido" : "Martinez", "fechaNacimiento" : ISODate("1992-10-23T03:00:00Z"), "posicion" : "delantero", "ciudad" : "Bahia Blanca" }
+{ "_id" : ObjectId("5f866e32f043005d717f4687"), "nombre" : "Carlos", "apellido" : "tevez", "fechaNacimiento" : ISODate("1985-02-10T03:00:00Z"), "posicion" : "delantero", "ciudad" : "Buenos Aires" }
+{ "_id" : ObjectId("5f866e6cf043005d717f4688"), "nombre" : "Sergio", "apellido" : "Aguero", "fechaNacimiento" : ISODate("1987-12-10T03:00:00Z"), "posicion" : "delantero", "ciudad" : "Buenos Aires", "piernaHabil" : "derecha" }
+{ "_id" : ObjectId("5f866efcf043005d717f4689"), "nombre" : "Alejandro", "apellido" : "Gomez", "fechaNacimiento" : ISODate("1986-03-13T03:00:00Z"), "posicion" : "volante", "ciudad" : "Buenos Aires", "apodo" : "papu" }
